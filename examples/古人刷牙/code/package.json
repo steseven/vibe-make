@@ -1,0 +1,12 @@
+{
+  "name": "ancient-toothbrush",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "python build.py",
+    "dev": "npx --yes hyperframes@0.8.152 preview",
+    "check": "npx --yes hyperframes@0.8.152 check",
+    "render": "npx --yes hyperframes@0.8.152 render --quality high -o renders/final-raw.mp4",
+    "render:preview": "npx --yes hyperframes@0.8.152 render --quality high -o renders/preview-raw.mp4"
+  }
+}

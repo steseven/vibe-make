@@ -1,0 +1,19 @@
+@font-face { font-family: "HSerif"; src: url("assets/serif.ttf") format("truetype"); font-weight: 200 900; }
+@font-face { font-family: "HTitle"; src: url("assets/title.ttf") format("truetype"); }
+/* 竖屏 1080×1920。舞台 y 160–1100（中心约 540, 640）；字幕区 y 1130–1350，行宽 x 90–930；y 1350 以下不放文字 */
+:root { --gold:#F4D179; --white:#FEFEFC; }
+html, body { margin:0; background:#000; }
+body { font-family:"HSerif",serif; color:var(--white); }
+#root { position:relative; width:1080px; height:1920px; overflow:hidden; background:#07060A; }
+#stage { position:absolute; left:0; top:0; width:1080px; height:1920px; }
+b { font-weight:inherit; } .g { color:var(--gold); }
+
+/* 字幕：思源宋体 600 60px，白 #FEFEFC，关键词金 #F4D179；最多两行，整块在 y 1130–1350 里垂直居中 */
+.sub { position:absolute; left:90px; top:1130px; width:840px; height:220px; }
+.st { position:relative; width:840px; height:220px; display:flex; flex-direction:column; justify-content:center; align-items:center; }
+.ln { display:block; width:840px; height:84px; text-align:center; font-family:"HSerif",serif; font-weight:600; font-size:60px; line-height:84px;
+      white-space:nowrap; color:var(--white); text-shadow:0 0 18px rgba(0,0,0,.95), 0 2px 6px rgba(0,0,0,.9); }
+
+/* 片尾：字幕区下沿的小字 */
+.endtag { position:absolute; left:90px; top:1300px; width:840px; height:40px; text-align:center; font-family:"HSerif",serif; font-weight:500;
+          font-size:28px; line-height:40px; color:rgba(178,172,162,.92); opacity:0; }
